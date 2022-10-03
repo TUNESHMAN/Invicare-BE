@@ -26,7 +26,6 @@ const options = {
 };
 const swaggerSpec = swaggerJsDoc(options);
 server.post("/", (req, res) => {
-  console.log(req.body, "POST REQ");
   res.send("Welcome to your workstation app!");
 });
 server.use("/api/v1/auth", authRouter);
