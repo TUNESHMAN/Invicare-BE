@@ -20,9 +20,7 @@ router.post("/login", (req, res) => {
   Users.getBy({ email })
     .then((user) => {
       if (user && bcrypt.compareSync(password, user.password)) {
-        console.log(user);
         const token = genToken(user);
-        console.log(token);
 
         res.status(200).json({
           message: `Welcome ${user.email}!`,
