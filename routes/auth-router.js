@@ -4,7 +4,6 @@ const Users = require("../users/user-model");
 
 const genToken = require("../auth/token");
 
-
 router.post("/login", (req, res) => {
   let { email, password } = req.body;
 
@@ -37,14 +36,13 @@ router.post("/login", (req, res) => {
     });
 });
 
-
 router.post("/register", (req, res) => {
   let user = req.body;
   const hash = bcrypt.hashSync(user.password, 10);
   user.password = hash;
   Users.insert(user)
     .then((saved) => {
-      res.status(201).json(saved);
+      res.status(201).json({ message: `Sucessful sign up ${user.firstName}` });
     })
     .catch((error) => {
       res.status(500).json(error);
