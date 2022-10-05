@@ -30,6 +30,10 @@
     "swagger-jsdoc": "^6.0.0",
     "swagger-ui-express": "^4.5.0"
   },
+  "engines": {
+    "node": ">=14.19 <=16.x",
+    "yarn": ">=1.15"
+  },
   "devDependencies": {
     "nodemon": "^2.0.20"
   }
