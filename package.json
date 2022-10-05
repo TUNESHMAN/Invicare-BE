@@ -27,7 +27,8 @@
     "helmet": "^6.0.0",
     "jsonwebtoken": "^8.5.1",
     "knex": "^2.3.0",
-    "mongoose": "^6.6.1"
+    "mongoose": "^6.6.1",
+    "sqlite3": "^5.1.2"
   },
   "engines": {
     "node": ">=14.19 <=16.x",
