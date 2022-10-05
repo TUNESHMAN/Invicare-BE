@@ -14,7 +14,7 @@ server.use(helmet());
 server.use(express.json());
 
 
-// const swaggerSpec = swaggerJsDoc(options);
+
 server.post("/", (req, res) => {
   res.send("Welcome to your workstation app!");
 });
@@ -23,6 +23,5 @@ server.use("/api/v1/user", userRouter);
 
 server.use("/api/v1/workstation", workStationRouter);
 server.use("/api/v1/schedule", scheduleRouter);
-// server.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 module.exports = server;
