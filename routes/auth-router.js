@@ -4,16 +4,7 @@ const Users = require("../users/user-model");
 
 const genToken = require("../auth/token");
 
-/**
- * @swagger
- * /api/v1/auth/login:
- *   post:
- *     summary: login to the app
- *     description: Login to the app.
- *     responses:
- *       201:
- *         description: Created.
- */
+
 router.post("/login", (req, res) => {
   let { email, password } = req.body;
 
@@ -46,16 +37,7 @@ router.post("/login", (req, res) => {
     });
 });
 
-/**
- * @swagger
- * /api/v1/auth/register:
- *   post:
- *     summary: Register on the app
- *     description: Register as a new user.
- *     responses:
- *       201:
- *         description: Created.
- */
+
 router.post("/register", (req, res) => {
   let user = req.body;
   const hash = bcrypt.hashSync(user.password, 10);
