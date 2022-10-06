@@ -5,7 +5,7 @@ const Users = require("../users/user-model");
 const genToken = require("../auth/token");
 
 router.post("/login", (req, res) => {
-  res.set("Access-Control-Allow-Origin", "*");
+  // res.set("Access-Control-Allow-Origin", "*");
   let { email, password } = req.body;
 
   Users.getBy({ email })
