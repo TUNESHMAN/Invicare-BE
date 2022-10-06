@@ -9,11 +9,13 @@ const workStationRouter = require("../routes/index").workstation;
 const scheduleRouter = require("../schedule/schedule-router");
 
 const server = express();
-server.use(cors());
+server.use(
+  cors({
+    origin: "*",
+  })
+);
 server.use(helmet());
 server.use(express.json());
-
-
 
 server.post("/", (req, res) => {
   res.send("Welcome to your workstation app!");
